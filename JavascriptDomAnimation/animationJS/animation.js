@@ -1,36 +1,38 @@
 /**
  * Created by Eruda on 2017/11/22.
  */
-function positionMove(){
-    var moveMassage=document.getElementById("moveMassage");
-    var xpos=parseInt(moveMassage.style.left);
-    var ypos=parseInt(moveMassage.style.top);
-    if(xpos!=1000||ypos!=400){
-        if(xpos<1000){
+function positionMove(elementID,finalX,finalY,interval){//对函数进行抽象  移动对象/最终x位置/最终y位置/以及每次移动的距离
+
+    var element=document.getElementById(elementID);
+    var xpos=parseInt(element.style.left);
+    var ypos=parseInt(element.style.top);
+    if(xpos!=finalX||ypos!=finalY){
+        if(xpos<finalX){
             xpos++;
         }
-        if(xpos>1000){
+        if(xpos>finalX){
             xpos--;
         }
-        if(ypos<400){
+        if(ypos<finalY){
             ypos++;
         }
-        if(ypos>400){
+        if(ypos>finalY){
             ypos--;
         }
     }else {
         return true;
     }
-    moveMassage.style.left=xpos+"px";
-    moveMassage.style.top=ypos+"px";
-    setTimeout("positionMove()",10);
+    element.style.left=xpos+"px";
+    element.style.top=ypos+"px";
+    setTimeout("positionMove('"+elementID+"','"+finalX+"','"+finalY+"','"+interval+"')",interval);//记得写注释
 }
 
-function chengePosition() {
-    var moveMassage=document.getElementById("moveMassage");
-    moveMassage.style.position="absolute";
-    moveMassage.style.left="50px";
-    moveMassage.style.top="100px";;
+function chengePosition() {//设定初始的元素位置
+    var element=document.getElementById("moveMassage");
+    element.style.position="absolute";
+    element.style.left="50px";
+    element.style.top="100px";
+    positionMove("moveMassage",400,1000,100);
+
 }
 addLoadEvent(chengePosition);
-addLoadEvent(positionMove);
