@@ -24,7 +24,7 @@ function positionMove(elementID,finalX,finalY,interval){//对函数进行抽象 
     }
     element.style.left=xpos+"px";
     element.style.top=ypos+"px";
-    setTimeout("positionMove('"+elementID+"','"+finalX+"','"+finalY+"','"+interval+"')",interval);//记得写注释
+    setTimeout("positionMove('"+elementID+"','"+finalX+"','"+finalY+"','"+interval+"')",interval);//记得写注释 这里的函数传递应为需要拼接字符串，函数名称中带参数引号，需要用单引号嵌套 用加号表示参数
 }
 
 function chengePosition() {//设定初始的元素位置
