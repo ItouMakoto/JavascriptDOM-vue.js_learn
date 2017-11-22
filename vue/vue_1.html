@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vue.js</title>
+    <script src="js/vue.js" type="text/javascript"></script>
+    <script src="js/contral.js" type="text/javascript"></script>
+    <style type="text/css">
+        body{
+            height: 700px;
+        }
+        .guide{
+            width: 100%;
+            height: 30%;
+            background-color: #e8ca38;
+        }
+        .side{
+            width:30%;
+            height: 420px;
+            background-color: #e843b8;
+            float: left;
+        }
+        .below{
+            width: 100%;
+            height: 10%;
+            background-color: #55e8e3;
+        }
+        .main_frame{
+            float: right;
+            height: 420px;
+            width: 70%;
+            background-color: #0033e8;
+        }
+        #contain{
+            overflow: hidden;
+        }
+        #test8, #test9{
+            height: 700px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div id="test2">
+<span v-bind:title="message" v-if="seen">
+    show the massage when mouse on!
+</span>
+</div>
+<div id="test4">
+    <ol>
+        <li v-for="row in lists">{{row.text}}</li>
+    </ol>
+</div>
+<div id="test5">
+    <p>{{message}}</p>
+    <button v-on:click="reserveMessage">逆转</button>
+</div>
+<div id="test6">
+    <p>{{message}}</p>
+    <input type="text" v-model="message">
+</div>
+<div id="test7">
+    <ol>
+    <lisp-item
+        v-for="item in lists"
+        v-bind:u="item"
+        v-bind:key="item.id"
+    ></lisp-item>
+    </ol>
+</div>
+<!--<div id="test8">
+    <div class="guide">导航栏</div>
+    <div id="contain">
+    <div class="side">侧边栏</div>
+    <div class="main_frame">主窗口</div>
+    </div>
+    <div class="below">底部窗口</div>
+</div>-->
+<div id="test9">
+    <app-guide></app-guide>
+    <app-mid></app-mid>
+    <app-below></app-below>
+</div>
+</body>
+</html>
