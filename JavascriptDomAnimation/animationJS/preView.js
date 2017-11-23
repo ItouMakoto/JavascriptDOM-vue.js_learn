@@ -1,5 +1,6 @@
 /**
  * Created by Eruda on 2017/11/23.
+ * animation to case
  */
 
 addLoadEvent(preView);
@@ -7,11 +8,10 @@ function preView() {
     var element=document.getElementById("preView");
     alert(element.left);
     element.style.left=0+"px";
-    element.style.top=0+"px";//优先加载css，之后才加载js，所以要先设定样式，否则为undefine
+    element.style.top=0+"px";//优先加载css，之后才加载js，所以要先设定样式，否则为undefine。
     var lists=document.getElementsByTagName("ol");
     var links=lists[0].getElementsByTagName("a");
     links[0].onmouseover=function () {
-
         positionMove("preView",-100,0,1);
     };
     links[1].onmouseover=function () {
