@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" http-equiv="content-type" content="text/html">
+    <meta name="author" content="Makoto">
+
+    <title>webDesign</title>
+    <style>
+        #slideShow{
+            width: 100px;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        #preView{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+
+        }
+    </style>
+    <script src="animationJS/positionMove.js"></script>
+    <script src="animationJS/addLoadEvent.js"></script>
+    <script src="animationJS/preView.js"></script>
+</head>
+<body>
+    <h1>web Design</h1>
+<p>the are many areas in web design.</p>
+<ol>
+    <li><a href="structure.html">Structure</a></li>
+    <li><a href="presentation.html">Presentation</a></li>
+    <li><a href="behavior.html">Behavior</a></li>
+</ol>
+    <div id="slideShow">
+    <img src="image/topics.gif" alt="preView" id="preView">
+    </div>
+</body>
+</html>
