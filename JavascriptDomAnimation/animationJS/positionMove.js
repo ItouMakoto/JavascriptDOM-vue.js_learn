@@ -1,7 +1,7 @@
 /**
  * Created by Eruda on 2017/11/23.
  */
-function positionMoveDirecly(elementID, finalX, finalY, interval){//对函数进行抽象  移动对象/最终x位置/最终y位置/以及每次移动的距离
+function positionMoveDirecly(elementID, finalX, finalY, interval){//对函数进行抽象  移动对象/最终x位置/最终y位置/以及每次移动的距离*****调用前确保对象的left和right值存在
     if(!document.getElementById)//测试浏览器兼容性
     {
         console.log("getElementbyid is not siutble");
