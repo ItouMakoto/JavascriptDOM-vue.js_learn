@@ -7,7 +7,7 @@ function chengePosition() {//设定初始的元素位置
     element.style.position="absolute";
     element.style.left="50px";
     element.style.top="100px";
-    positionMove("moveMassage",400,1000,100);
+    positionMoveDirecly("moveMassage",400,1000,100);
 
 }
 addLoadEvent(chengePosition);
