@@ -70,15 +70,22 @@ window.onload=function () {
     })
     var below=Vue.extend({
         template:'<div class="below"></div>'
-    })
+    });
     //注册模板
     Vue.component('app-guide',guide);
     Vue.component('app-mid',main);
     Vue.component('app-below',below);
     new Vue({
         el:'#test9',
-    })
+    });
 
+    var test10=new Vue({
+        el:'#test10',
+        data:{
+            raw: '<div><input type="text" placeholder="123" title="vue cpmplate"></div>',
+
+        }
+    });
 }
 
 
