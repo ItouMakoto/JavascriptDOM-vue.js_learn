@@ -1,7 +1,86 @@
-article{
+*{
+    margin: 0;
+    padding: 0;
+}
+ article{
     font-family: "方正喵呜体";
     font-size: x-large;
 }
 h1{
     font-family: Impact;
+}
+
+body{
+    margin: 1em 15%;
+    color: #fb5;
+    background-image: url("../image/background.gif");
+    background-color: #334;
+    background-attachment: fixed;
+    background-repeat: repeat-x;
+    background-position: top left;
+    max-width: 1000em;
+}
+#header{
+    color: #ec8;
+    background-color: #334;
+    border-color: #667;
+
+    background-image: url("../image/guitarist.gif");
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    border-width: 0.1em;
+    border-style: solid;
+    border-bottom-width: 0px;
+}
+a:link{
+    color: #445;
+    background-color: #eb6;
+}
+a:hover{
+    color: #557;
+    background-color: #fb5;
+
+}
+a:active{
+    color:#778;
+    background-color: #ec8;
+}
+#navigation{
+    color: #455;
+    background-color: #667;
+    border-color: #667;
+
+    background-image: url("../image/navbar.gif");
+    background-position: bottom left;
+}
+#navigation ul{
+
+}
+#content{
+    color: #223;
+    background-color: #edc;
+    border-color: #667;
+
+
+
+}
+
+#navigation ul{
+    border-color: #99a;
+}
+
+#navigation a:link,#navigation a:visited{
+    color:#eef;
+    background-color: transparent;
+    border-color: #99a;
+
+}
+#navigation a:hover{
+    color:#445;
+    background-color: #eb6;
+}
+
+#navigation a:active{
+    color:#667;
+    background-color: #ec8;
 }
