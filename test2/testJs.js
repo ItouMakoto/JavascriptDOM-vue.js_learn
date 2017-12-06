@@ -1,13 +1,9 @@
-window.onload=test();
+window.onload;
 
 function test(){
 /*    var a=null;
     var b="";*/
-alert(document.getElementsByTagName("abbr")[0].lastChild.firstChild.nodeValue);
-
-    var a=new Array(3);
-    a[0]={first:"1st",second:"2secd"};
-    alert(a[0].second);
+    alert((1/3)==(1/3));
 // Only change code above this line
 }
 
